@@ -3,9 +3,14 @@ from google.oauth2.service_account import Credetials
 import random
 from words import word_list
 
-def get_word():
+def random_word_selected():
     word = random.choice(word_list)
     return word.upper()
 
-def play(word):
-    word_completion ="_" * len (word)
+def game(word):
+    guessed_word_state ="_" * len (word)
+    guessed = False
+    guessed_letters = []
+    guessed_words = []
+    tries = 6
+    
