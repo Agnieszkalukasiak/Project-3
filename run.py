@@ -9,8 +9,15 @@ def random_word_selected():
 
 def game(word):
     guessed_word_state ="_" * len (word)
-    guessed = False
-    guessed_letters = []
-    guessed_words = []
+    word_is_guessed = False
+    letters_guessed = []
+    words_guessed = []
     tries = 6
-    
+
+print("Let's play Hangman!")
+print(display_hangman(tries))
+print(guessed_word_state)
+print ("/n")
+
+while not guessed and tries > 0 :
+    guess = input("please guess a word or a letter:").upper()
