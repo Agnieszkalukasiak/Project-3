@@ -14,14 +14,19 @@ def game(word):
     words_guessed = []
     tries = 6
 
-    print("Let's play Hangman!")
+    print("Let's play!")
     print(display_hangman(tries))
     print(guessed_word)
     print ("/n")
-
     while not guessed and tries > 0:
-        guess = input("Please guess a word or a letter")
+        guess = input("Guess a word or a letter:").upper()
         if len(guess) == 1 and guess.isalpha():
+
+            elif len(guess) == len(word) and guess.isalpha:
+
+                else:
+                    print("incorrect")
+
             if guess in letters_guessed:
                 print ("You already guessed that letter", guess)
         elif guess not in word:
@@ -145,5 +150,5 @@ def game(word):
             word = random_word_selected()
             play(word)
     
-    if name == "_main_":
+    if_name_ == "_main_":
         main()
