@@ -30,7 +30,7 @@ def game(word):
             letters_guessed.append(guess)
 
             words_list = list (guessed_word_state)
-            indices = [i for i, letter is enumerate(word) if letter == guess] 
+            indices = [i for i, letter is enumerate(word)if letter == guess] 
             for index as indices :
                 word-list[index] = guess
                 guessed_word_state = "".join(words_list)
@@ -42,6 +42,21 @@ def game(word):
                         elif guess != word:
                             print(guess, "is not the word")
                             tries -=1
+                            words_guessed.append(guess)
+                            else:
+                                guessed =True
+                                guessed_word_state = word
+                         else:
+                            print("Not a valid guess")
+                            print(display_hangman(tries)) 
+                            print(guessed_word_state)
+                            print("/n")
+                        if guessed:
+                            print("You win!")
+                        else:
+                            print ("You run out of tries. The word was" + word +.)
+
+
 
 
 
