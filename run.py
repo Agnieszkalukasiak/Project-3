@@ -19,12 +19,13 @@ print(display_hangman(tries))
 print(guessed_word_state)
 print ("/n")
 
-while not guessing tries > 0:
-    guess = input("Please guess a word or a letter")
-    if len(guess) == 1 and guess.isalpha():
-        if guess in letters_guessed:
+    while not guessing and tries > 0:
+        guess = input("Please guess a word or a letter")
+        if len(guess) == 1 and guess.isalpha():
+            if guess in letters_guessed:
             print ("You already guessed that letter", guess)
         elif guess not in word:
-            print (guess"is not in word")
+            print (f"{guess}is not in word")
             tries -=1
+            letters_guessed.append(guess)
 
