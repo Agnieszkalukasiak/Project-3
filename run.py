@@ -8,18 +8,18 @@ def random_word_selected():
     return word.upper()
 
 def game(word):
-    guessed_word_state ="_" * len (word)
-    word_is_guessed = False
+    guessed_word ="_" * len (word)
+    guessed = False
     letters_guessed = []
     words_guessed = []
     tries = 6
 
     print("Let's play Hangman!")
     print(display_hangman(tries))
-    print(guessed_word_state)
+    print(guessed_word)
     print ("/n")
 
-    while not guessing and tries > 0:
+    while not guessed and tries > 0:
         guess = input("Please guess a word or a letter")
         if len(guess) == 1 and guess.isalpha():
             if guess in letters_guessed:
@@ -56,7 +56,82 @@ def game(word):
                         else:
                             print ("You run out of tries. The word was" + word +.)
 
+        def display_hangman(tries):
+            stages = [#final state: head, torso, both arms, and both legs
+            """
 
+            ------
+            |     |
+            |     o
+            |    \|/
+            |     |
+            |   // \\
+            _
+            """
+            # head, torso, both arms, one leg
+            
+            """
+             ------
+            |     |
+            |     o
+            |    \|/
+            |     |
+            |   // 
+            _
 
+            """
+            #head, torso, both arms
+            """
+              ------
+            |     |
+            |     o
+            |    \|/
+            |     |
+            |   
+            _
+            """
+            #head, torso, one arm
+            """
+              ------
+            |     |
+            |     o
+            |    \|
+            |     |
+            |   
+            _
 
+            """
+            #head, torso
+            """
+              ------
+            |     |
+            |     o
+            |     |
+            |     |
+            |   
+            _
 
+            """
+            #head
+
+            """
+            ------
+            |     |
+            |     o
+            |     
+            |     
+            |   
+            _
+
+            """
+            #initial state
+            """
+            ------
+            |     |
+            |     
+            |     
+            |     
+            |   
+            _
+            ]
+            return stages [tries]
