@@ -56,6 +56,8 @@ def game(word):
                         else:
                             print ("You run out of tries. The word was" + word +.)
 
+
+
         def display_hangman(tries):
             stages = [#final state: head, torso, both arms, and both legs
             """
@@ -135,3 +137,13 @@ def game(word):
             _
             ]
             return stages [tries]
+
+    def main():
+        word = random_word_selected()
+        play(word)
+        while input ("Want to play again? (Y/N)").upper()== "Y":
+            word = random_word_selected()
+            play(word)
+    
+    if name == "_main_":
+        main()
