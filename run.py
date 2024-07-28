@@ -60,7 +60,8 @@ def game(word):
         print ("You run out of tries. The word was" + word +".")
 
 def hangman(tries):
-    stages = [#final state: head, torso, both arms, and both legs
+    stages = [
+        #final state: head, torso, both arms, and both legs
             """
             ------
             |     |
@@ -70,7 +71,7 @@ def hangman(tries):
             |   // \\
             _
             """ ,
-            # head, torso, both arms, one leg   
+            #head, torso, both arms, one leg   
             """ 
              ------
             |     |
@@ -79,7 +80,6 @@ def hangman(tries):
             |     |
             |   // 
             _
-
             """ ,
             #head, torso, both arms
             """ 
@@ -90,10 +90,8 @@ def hangman(tries):
             |     |
             |   
             _
-
             """ ,
             #head, torso, one arm
-
             """
               ------
             |     |
@@ -102,10 +100,8 @@ def hangman(tries):
             |     |
             |   
             _
-
             """ ,
             #head, torso
-
             """
               ------
             |     |
@@ -114,10 +110,8 @@ def hangman(tries):
             |     |
             |   
             _
-
             """ ,
             #head
-
             """
             ------
             |     |
@@ -126,10 +120,8 @@ def hangman(tries):
             |     
             |   
             _
-
             """ ,
             #initial state
-
             """
              ------
             |     |
@@ -138,7 +130,6 @@ def hangman(tries):
             |     
             |   
             _
-
             """
     ]
     return stages[tries]
