@@ -140,8 +140,8 @@ def hangman(tries):
             _
 
             """
-]
-return stages[tries]
+    ]
+    return stages[tries]
 
 def main():
         word = random_word_selected()
