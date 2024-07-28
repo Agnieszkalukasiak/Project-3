@@ -1,7 +1,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 import random
-from word import words_list
+from words import words_list
 
 def random_word_selected():
     word = random.choice(word_list)
@@ -17,45 +17,32 @@ def game(word):
     print("Let's play!")
     print(display_hangman(tries))
     print(guessed_word)
-    print ("/n")
+    print ("\n")
+
     while not guessed and tries > 0:
         guess = input("Guess a word or a letter:").upper()
         if len(guess) == 1 and guess.isalpha():
-
-            elif len(guess) == len(word) and guess.isalpha:
-
-                else:
-                    print("incorrect")
-
             if guess in letters_guessed:
-                print ("You already guessed that letter", guess)
-        elif guess not in word:
-            print (f"{guess}is not in word")
-            tries -=1
-            letters_guessed.append(guess)
+                    print("You already guessed that letter", guess)
+            elif guess not in word:
+                print(guess, "is not in word")        
+            elif len(guess) == len(word) and guess.isalpha:
+                tries -= 1
+                letters_guessed.append(guess)
+            else: 
+                print("You did it!", guess, " is in the word")
+                letters_guessed.append(guess)
+                words_list=word(guessed_word)
+                indiced = [i for i, letter in enumerate(word) if letter == guess]
+                for index in indiced:
+                    words_list[index] = guess
+        elif len(guess) == len(word) and guess.isalpha():
 
-            words_list = list (guessed_word_state)
-            indices = [i for i, letter is enumerate(word)if letter == guess] 
-            for index as indices :
-                word-list[index] = guess
-                guessed_word_state = "".join(words_list)
-                if "_" not in guessed_word_state:
-                    guessed = True
-                    elif len(guess)== len(word) and guess.isalpha():
-                        if guess in words_guessed:
-                            print("You already guessed the word", guess)
-                        elif guess != word:
-                            print(guess, "is not the word")
-                            tries -=1
-                            words_guessed.append(guess)
-                            else:
-                                guessed =True
-                                guessed_word_state = word
-                         else:
-                            print("Not a valid guess")
-                            print(display_hangman(tries)) 
-                            print(guessed_word_state)
-                            print("/n")
+        else:
+            print("Not a valid guess")
+        print(display_hangman(tries)) 
+        print(guessed_word_state)
+        print("\n")
                         if guessed:
                             print("You win!")
                         else:
