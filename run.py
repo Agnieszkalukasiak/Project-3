@@ -5,18 +5,18 @@ import random
 from words import words_list
 
 def random_word_selected():
-    word = random.choice(word_list)
+    word = random.choice(words_list)
     return word.upper()
 
 def game(word):
-    guessed_word ="_" * len (word)
+    guessed_word ="_" * len(word)
     guessed = False
     letters_guessed = []
     words_guessed = []
     tries = 6
 
     print("Let's play!")
-    print(display_hangman(tries))
+    print(hangman(tries))
     print(guessed_word)
     print ("\n")
 
@@ -33,11 +33,11 @@ def game(word):
             else: 
                 print("You did it!", guess, " is in the word")
                 letters_guessed.append(guess)
-                words_list=word(guessed_word)
-                indiced = [i for i, letter in enumerate(word) if letter == guess]
+                words_list=list(guessed_word)
+                indices = [i for i, letter in enumerate(word) if letter == guess]
                 for index in indiced:
                     words_list[index] = guess
-                words_guessed = "".join(words_list)
+                guessed_word = "".join(words_list)
             if "_" not in words_guessed:
                 guessed = True
         elif len(guess) == len(word) and guess.isalpha():
@@ -45,24 +45,22 @@ def game(word):
                 print("You already guessed the word", guess)
             elif guess != word:
                 print(guess, "is not in the word")
-                tried -= 1
-                guessed_word.append(guess)
+                tries -= 1
+                words_guessed.append(guess)
             else: guessed = True
             guessed_word = word
         else:
             print("Not a valid guess")
-        print(display_hangman(tries)) 
-        print(guessed_word_state)
+        print(hangman(tries)) 
+        print(guessed_word)
         print("\n")
     if guessed:
         print("You win!")
     else:
         print ("You run out of tries. The word was" + word +".")
 
-
-
-        def display_hangman(tries):
-            stages = [#final state: head, torso, both arms, and both legs
+def hangman(tries):
+    stages = [#final state: head, torso, both arms, and both legs
 
             """
             ------
@@ -72,6 +70,7 @@ def game(word):
             |     |
             |   // \\
             _
+
             """
             # head, torso, both arms, one leg
             
@@ -86,6 +85,7 @@ def game(word):
 
             """
             #head, torso, both arms
+
             """
               ------
             |     |
@@ -95,7 +95,9 @@ def game(word):
             |   
             _
             """
+
             #head, torso, one arm
+
             """
               ------
             |     |
@@ -107,6 +109,7 @@ def game(word):
 
             """
             #head, torso
+
             """
               ------
             |     |
@@ -147,10 +150,10 @@ return stages [tries]
 
 def main():
         word = random_word_selected()
-        play(word)
+        game(word)
         while input ("Want to play again? (Y/N)").upper()== "Y":
             word = random_word_selected()
             play(word)
     
-if __name__ == "_main_":
+if __name__ == "__main__":
     main()
