@@ -66,7 +66,7 @@ def hangman(tries):
             ------
             |     |
             |     o
-            |    \|/
+            |   \\|/
             |     |
             |   // \\
             _
@@ -76,7 +76,7 @@ def hangman(tries):
              ------
             |     |
             |     o
-            |    \|/
+            |   \\|/
             |     |
             |   // 
             _
@@ -86,7 +86,7 @@ def hangman(tries):
               ------
             |     |
             |     o
-            |    \|/
+            |   \\|/
             |     |
             |   
             _
@@ -96,7 +96,7 @@ def hangman(tries):
               ------
             |     |
             |     o
-            |    \|
+            |   \\|
             |     |
             |   
             _
@@ -141,5 +141,5 @@ def main():
             word = random_word_selected()
             play(word)
     
-if __name__ == "__main__":
-    main()
+        if __name__ == "__main__":
+            main()
