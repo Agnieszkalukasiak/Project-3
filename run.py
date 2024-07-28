@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+import json
 import random
 from words import words_list
 
@@ -62,8 +63,8 @@ def game(word):
 
         def display_hangman(tries):
             stages = [#final state: head, torso, both arms, and both legs
-            """
 
+            """
             ------
             |     |
             |     o
