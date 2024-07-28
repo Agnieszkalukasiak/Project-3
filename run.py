@@ -53,10 +53,10 @@ def game(word):
         print(display_hangman(tries)) 
         print(guessed_word_state)
         print("\n")
-                        if guessed:
-                            print("You win!")
-                        else:
-                            print ("You run out of tries. The word was" + word +.)
+    if guessed:
+        print("You win!")
+    else:
+        print ("You run out of tries. The word was" + word +.)
 
 
 
@@ -129,18 +129,22 @@ def game(word):
 
             """
             #initial state
+
             """
-            ------
+            
+             ------
             |     |
             |     
             |     
             |     
             |   
             _
-            ]
-            return stages [tries]
+            """
+]
+            
+return stages [tries]
 
-    def main():
+def main():
         word = random_word_selected()
         play(word)
         while input ("Want to play again? (Y/N)").upper()== "Y":
