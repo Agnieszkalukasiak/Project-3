@@ -36,8 +36,18 @@ def game(word):
                 indiced = [i for i, letter in enumerate(word) if letter == guess]
                 for index in indiced:
                     words_list[index] = guess
+                words_guessed = "".join(words_list)
+            if "_" not in words_guessed:
+                guessed = True
         elif len(guess) == len(word) and guess.isalpha():
-
+            if guess in words_guessed:
+                print("You already guessed the word", guess)
+            elif guess != word:
+                print(guess, "is not in the word")
+                tried -= 1
+                guessed_word.append(guess)
+            else: guessed = True
+            guessed_word = word
         else:
             print("Not a valid guess")
         print(display_hangman(tries)) 
