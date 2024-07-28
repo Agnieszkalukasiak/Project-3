@@ -56,7 +56,7 @@ def game(word):
     if guessed:
         print("You win!")
     else:
-        print ("You run out of tries. The word was" + word +.)
+        print ("You run out of tries. The word was" + word +".")
 
 
 
@@ -151,5 +151,5 @@ def main():
             word = random_word_selected()
             play(word)
     
-    if_name_ == "_main_":
-        main()
+if __name__ == "_main_":
+    main()
