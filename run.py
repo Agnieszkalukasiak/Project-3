@@ -14,7 +14,7 @@ def game(word):
     words_guessed = []
     tries = 6
 
-    print("Let's play!")
+    print(Fore.RED + "Let's play!")
     print(hangman(tries))
     print(guessed_word)
     print ("\n")
@@ -69,7 +69,7 @@ def hangman(tries):
             |     |
             |    / \
             _
-            """ ,
+            """,
             #head, torso, both arms, one leg   
             """ 
              ------
@@ -79,9 +79,9 @@ def hangman(tries):
             |     |
             |    / 
             _
-            """ ,
+            """,
             #head, torso, both arms
-            """ 
+            """
               ------
             |     |
             |     o
@@ -89,7 +89,7 @@ def hangman(tries):
             |     |
             |   
             _
-            """ ,
+            """,
             #head, torso, one arm
             """
               ------
@@ -99,7 +99,7 @@ def hangman(tries):
             |     |
             |   
             _
-            """ ,
+            """,
             #head, torso
             """
               ------
@@ -109,7 +109,7 @@ def hangman(tries):
             |     |
             |   
             _
-            """ ,
+            """,
             #head
             """
             ------
@@ -119,7 +119,7 @@ def hangman(tries):
             |     
             |   
             _
-            """ ,
+            """,
             #initial state
             """
              ------
@@ -138,7 +138,7 @@ def main():
         game(word)
         while input ("Want to play again? (Y/N)").upper()== "Y":
             main()
-           
-    
+               
 if __name__ == "__main__":
+    inti(autoreset=True)
     main()
