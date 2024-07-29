@@ -25,17 +25,11 @@ def game(word):
                     print("You already guessed that letter", guess)
             elif guess not in word:
                 print(guess, "is not in word")        
-            elif len(guess) == len(word) and guess.isalpha:
                 tries -= 1
                 letters_guessed.append(guess)
             else: 
                 print("You did it!", guess, " is in the word")
                 letters_guessed.append(guess)
-                words_list=list(guessed_word)
-                indices = [i for i, letter in enumerate(word) if letter == guess]
-                for index in indiced:
-                    words_list[index] = guess
-                guessed_word = "".join(words_list)
             if "_" not in words_guessed:
                 guessed = True
         elif len(guess) == len(word) and guess.isalpha():
