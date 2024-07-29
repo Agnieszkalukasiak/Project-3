@@ -1,6 +1,7 @@
 
 import random
 from words import words_list
+from colorama import init, Fore
 
 def random_word_selected():
     word = random.choice(words_list)
@@ -22,13 +23,13 @@ def game(word):
         guess = input("Guess a word or a letter:").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in letters_guessed:
-                    print("You already guessed that letter", guess)
+                    print(Fore.RED + "You already guessed that letter", guess)
             elif guess not in word:
-                print(guess, "is not in word")        
+                print(Fore.RED + guess, "is not in word")        
                 tries -= 1
                 letters_guessed.append(guess)
             else: 
-                print("You did it!", guess, " is in the word")
+                print(Fore.GREEN + "You did it!", guess, " is in the word")
                 letters_guessed.append(guess)
                 letter_list = list(guessed_word)
                 indices = [i for i, letter in enumerate(word) if letter == guess]
@@ -39,9 +40,9 @@ def game(word):
                 guessed = True
         elif len(guess) == len(word) and guess.isalpha():
             if guess in words_guessed:
-                print("You already guessed the word", guess)
+                print(Fore.RED + "You already guessed the word", guess)
             elif guess.lower() != word.lower():
-                print(guess, "is not in the word")
+                print(Fore.RED + guess, "is not in the word")
                 tries -= 1
                 words_guessed.append(guess)
             else: 
