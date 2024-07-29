@@ -3,10 +3,6 @@ import random
 from words import words_list
 from colorama import init, Fore
 
-def random_word_selected():
-    word = random.choice(words_list)
-    return word.upper()
-
 def game(word):
     guessed_word ="_" * len(word)
     guessed = False
@@ -60,8 +56,9 @@ def game(word):
 
 def hangman(tries):
     stages = [
-        #final state: head, torso, both arms, and both legs
+            #final state: head, torso, both arms, and both legs
             """
+            r
             ------
             |     |
             |     o
@@ -70,8 +67,10 @@ def hangman(tries):
             |    / \
             _
             """,
-            #head, torso, both arms, one leg   
-            """ 
+            #head, torso, both arms, one leg  
+             
+            """
+            r
              ------
             |     |
             |     o
@@ -81,7 +80,9 @@ def hangman(tries):
             _
             """,
             #head, torso, both arms
+
             """
+            r
               ------
             |     |
             |     o
@@ -91,7 +92,9 @@ def hangman(tries):
             _
             """,
             #head, torso, one arm
+
             """
+            r
               ------
             |     |
             |     o
@@ -101,7 +104,9 @@ def hangman(tries):
             _
             """,
             #head, torso
+
             """
+            r
               ------
             |     |
             |     o
@@ -111,7 +116,9 @@ def hangman(tries):
             _
             """,
             #head
+
             """
+            r
             ------
             |     |
             |     o
@@ -121,7 +128,9 @@ def hangman(tries):
             _
             """,
             #initial state
+            
             """
+            r
              ------
             |     |
             |     
