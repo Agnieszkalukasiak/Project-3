@@ -64,9 +64,9 @@ def hangman(tries):
             ------
             |     |
             |     o
-            |   \\|/
+            |    \|/
             |     |
-            |   // \\
+            |    / \
             _
             """ ,
             #head, torso, both arms, one leg   
@@ -74,9 +74,9 @@ def hangman(tries):
              ------
             |     |
             |     o
-            |   \\|/
+            |    \|/
             |     |
-            |   // 
+            |    / 
             _
             """ ,
             #head, torso, both arms
@@ -84,7 +84,7 @@ def hangman(tries):
               ------
             |     |
             |     o
-            |   \\|/
+            |    \|/
             |     |
             |   
             _
@@ -94,7 +94,7 @@ def hangman(tries):
               ------
             |     |
             |     o
-            |   \\|
+            |    \|
             |     |
             |   
             _
