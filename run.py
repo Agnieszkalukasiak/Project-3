@@ -30,6 +30,11 @@ def game(word):
             else: 
                 print("You did it!", guess, " is in the word")
                 letters_guessed.append(guess)
+                letter_list = list(guessed_word)
+                indices = [i for i, letter in enumerate(word) if letter == guess]
+                for index in indices:
+                    letter_list[index] = guess
+                guessed_word = "".join(letter_list)
             if "_" not in words_guessed:
                 guessed = True
         elif len(guess) == len(word) and guess.isalpha():
@@ -131,8 +136,8 @@ def main():
         word = random_word_selected()
         game(word)
         while input ("Want to play again? (Y/N)").upper()== "Y":
-            word = random_word_selected()
-            play(word)
+            main()
+           
     
 if __name__ == "__main__":
     main()
