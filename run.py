@@ -1,6 +1,4 @@
-import gspread
-from google.oauth2.service_account import Credentials
-import json
+
 import random
 from words import words_list
 
@@ -141,5 +139,5 @@ def main():
             word = random_word_selected()
             play(word)
     
-        if __name__ == "__main__":
-            main()
+if __name__ == "__main__":
+    main()
