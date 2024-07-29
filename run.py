@@ -35,12 +35,13 @@ def game(word):
         elif len(guess) == len(word) and guess.isalpha():
             if guess in words_guessed:
                 print("You already guessed the word", guess)
-            elif guess != word:
+            elif guess.lower() != word.lower():
                 print(guess, "is not in the word")
                 tries -= 1
                 words_guessed.append(guess)
-            else: guessed = True
-            guessed_word = word
+            else: 
+                guessed = True
+                guessed_word = word
         else:
             print("Not a valid guess")
         print(hangman(tries)) 
