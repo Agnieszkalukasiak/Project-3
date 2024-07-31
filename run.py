@@ -80,7 +80,7 @@ def hangman(tries):
             """,
             # head, torso, both arms, one leg
             r"""
-             ------
+            ------
             |     |
             |     o
             |    \|/
@@ -91,7 +91,7 @@ def hangman(tries):
             # head, torso, both arms
 
             r"""
-              ------
+            ------
             |     |
             |     o
             |    \|/
@@ -103,7 +103,7 @@ def hangman(tries):
 
             r"""
 
-              ------
+            ------
             |     |
             |     o
             |    \|
@@ -114,7 +114,7 @@ def hangman(tries):
             # head, torso
 
             r"""
-              ------
+            ------
             |     |
             |     o
             |     |
@@ -135,7 +135,7 @@ def hangman(tries):
             """,
             # initial state
             r"""
-             ------
+            ------
             |     |
             |
             |
