@@ -8,7 +8,7 @@ def random_word_selected():
     return word.upper()
 
 def game(word):
-    guessed_word ="_" * len(word)
+    guessed_word = " _ " * len(word)
     guessed = False
     letters_guessed = []
     words_guessed = []
