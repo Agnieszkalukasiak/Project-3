@@ -1,11 +1,14 @@
 
+
 import random
 from words import words_list
 from colorama import init, Fore
 
+
 def random_word_selected():
     word = random.choice(words_list)
     return word.upper()
+
 
 def game(word):
     guessed_word = " _ " * len(word)
@@ -17,7 +20,7 @@ def game(word):
     print(Fore.RED + "Let's play!")
     print(hangman(tries))
     print(guessed_word)
-    print ("\n")
+    print("\n")
 
     while not guessed and tries > 0:
         guess = input("Guess a word or a letter:").upper()
@@ -25,14 +28,17 @@ def game(word):
             if guess in letters_guessed:
                 print(Fore.RED + "You already guessed that letter", guess)
             elif guess not in word:
-                print(Fore.RED + guess, "is not in word")        
+                print(Fore.RED + guess, "is not in word")
                 tries -= 1
                 letters_guessed.append(guess)
-            else: 
-                print( Fore.GREEN + "You did it!", guess, "is in the word")
+            else:
+                print(Fore.GREEN + "You did it!", guess, "is in the word")
                 letters_guessed.append(guess)
                 letter_list = list(guessed_word)
-                indices = [i for i, letter in enumerate(word) if letter == guess]
+                indices = [
+                    i for i, letter in enumerate(word)
+                    if letter == guess
+                    ]
                 for index in indices:
                     letter_list[index] = guess
                 guessed_word = "".join(letter_list)
@@ -45,23 +51,24 @@ def game(word):
                 print(guess, "is not in the word")
                 tries -= 1
                 words_guessed.append(guess)
-            else: 
+            else:
                 guessed = True
                 guessed_word = word
         else:
-            print("Not a valid guess")   
-        print(hangman(tries)) 
+            print("Not a valid guess")
+        print(hangman(tries))
         print(guessed_word)
         print("\n")
     if guessed:
         print("You win!")
     else:
-        print ("You run out of tries. The word was " + word +".")
+        print("You run out of tries. The word was " + word + ".")
+
 
 def hangman(tries):
     stages = [
-            #final state: head, torso, both arms, and both legs
-            r"""            
+            # final state: head, torso, both arms, and both legs
+            r"""
             ------
             |     |
             |     o
@@ -71,28 +78,28 @@ def hangman(tries):
             _
 
             """,
-              #head, torso, both arms, one leg  
-            r"""          
+            # head, torso, both arms, one leg
+            r"""
              ------
             |     |
             |     o
             |    \|/
             |     |
-            |    / 
+            |    /
             _
             """,
-            #head, torso, both arms 
+            # head, torso, both arms
 
-            r"""             
+            r"""
               ------
             |     |
             |     o
             |    \|/
             |     |
-            |   
+            |
             _
-            """ ,
-            #head, torso, one arm
+            """,
+            # head, torso, one arm
 
             r"""
 
@@ -101,50 +108,52 @@ def hangman(tries):
             |     o
             |    \|
             |     |
-            |   
+            |
             _
             """,
-            #head, torso
+            # head, torso
 
-            r"""            
+            r"""
               ------
             |     |
             |     o
             |     |
             |     |
-            |   
+            |
             _
             """,
-            #head
+            # head
 
-            r"""          
+            r"""
             ------
             |     |
             |     o
-            |     
-            |     
-            |   
+            |
+            |
+            |
             _
             """,
-            #initial state
-            r"""          
+            # initial state
+            r"""
              ------
             |     |
-            |     
-            |     
-            |     
-            |   
+            |
+            |
+            |
+            |
             _
             """
     ]
     return stages[tries]
 
+
 def main():
-        word = random_word_selected()
-        game(word)
-        while input ("Want to play again? (Y/N)").upper()== "Y":
-            main()
-               
+    word = random_word_selected()
+    game(word)
+    while input("Want to play again? (Y/N)").upper() == "Y":
+        main()
+
+
 if __name__ == "__main__":
     init(autoreset=True)
     main()

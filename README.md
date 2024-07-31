@@ -54,6 +54,9 @@ I have tested the code by the following methods:
 
 ### Validator Testing
 -	No errors were returned when passing through the official PEP8 validator.
+https://pep8ci.herokuapp.com/
+
+![ pep8 result ](photos/pep8_result.png)
 
 ### Bugs
 - No bugs found
