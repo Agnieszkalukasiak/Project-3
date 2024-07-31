@@ -11,7 +11,7 @@ def random_word_selected():
 
 
 def game(word):
-    guessed_word = "_" * len(word)
+    guessed_word = " _ " * len(word)
     guessed = False
     letters_guessed = []
     words_guessed = []
