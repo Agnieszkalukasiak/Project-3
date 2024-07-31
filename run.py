@@ -20,7 +20,7 @@ def game(word):
     print ("\n")
 
     while not guessed and tries > 0:
-        guess = input("Guess a word or a letter:").upper()
+        guess = input("Guess a word or a letter:" \n).upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in letters_guessed:
                 print(Fore.RED + "You already guessed that letter", guess)
