@@ -31,7 +31,7 @@ Welcome to the Hangman Game in Python! This project is a simple command-line imp
 
  ### Used letters
 
--The player wins if they correctly guess all the letters in the word before running out of attempts.
+- The player wins if they correctly guess all the letters in the word before running out of attempts.
 - The player loses if they run out of attempts before guessing the word.
 
 ![ Letter already used ](photos/already_guessed_letter.png)
@@ -43,7 +43,7 @@ Welcome to the Hangman Game in Python! This project is a simple command-line imp
 ![ Hangeman ](photos/hangman_art.png)
 
 ### Features Left to Implement
-- I would implement three different levels of difficulty.
+-  Three different levels of difficulty.
 
 ###  Different level of Testing
 I have tested the code by the following methods:
