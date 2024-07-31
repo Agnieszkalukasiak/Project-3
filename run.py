@@ -56,7 +56,7 @@ def game(word):
     if guessed:
         print("You win!")
     else:
-        print ("You run out of tries. The word was" + word +".")
+        print ("You run out of tries. The word was " + word +".")
 
 def hangman(tries):
     stages = [
