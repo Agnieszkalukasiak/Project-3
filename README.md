@@ -40,7 +40,7 @@ Welcome to the Hangman Game in Python! This project is a simple command-line imp
 
 - The art representation  make it easy for the user to see what’s their progress in the game is. 
 
-![ Hangedman ](photos/hangman_art.png)
+![ Hangeman ](photos/hangman_art.png)
 
 ### Features Left to Implement
 - I would implement three different levels of difficulty.
