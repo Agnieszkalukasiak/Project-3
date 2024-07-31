@@ -9,9 +9,13 @@ Welcome to the Hangman Game in Python! This project is a simple command-line imp
 
 - The game selects a random word from a predefined list.
 
+<!--photo-->
+
 ### Interactive command-line interface.
 
 - The player has a limited number of attempts to guess the word.
+
+<!--photo-->
 
 ### Display of word progress, remaining attempts, and used letters.
 
@@ -19,9 +23,13 @@ Welcome to the Hangman Game in Python! This project is a simple command-line imp
 -The player wins if they correctly guess all the letters in the word before running out of attempts.
 - The player loses if they run out of attempts before guessing the word.
 
+<!--photo-->
+
 ### Art representation of the hangman state.
 
 -The art representation  make it easy for the user to see what’s their progress in the game is. 
+
+<!--photo-->
 
 ### Features Left to Implement
 - I would implement three different levels of difficulty.
@@ -52,9 +60,11 @@ This project was deployed at Heroku, steps for deploy are listed bellow:
 -	The live link can be found here: (https://project3-hangman-9e8f8cca5ebe.herokuapp.com/)
 
 ### Credits:
-•	I also searched for solutions of the problems that occurred during the project development on the following websites:
-o	Stackoverflow
-o	Geeksforgeeks
-o	Freecodecamp
-•	The Code Institute for the deployment terminal
+
+I searched for solutions of the problems that occurred during the project development on the following websites:
+
+-	Stackoverflow
+-	Geeksforgeeks
+-	Freecodecamp
+-	The Code Institute for the deployment terminal
 

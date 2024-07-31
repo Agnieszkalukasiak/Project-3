@@ -61,7 +61,7 @@ def game(word):
 def hangman(tries):
     stages = [
             #final state: head, torso, both arms, and both legs
-            """
+            r"""            
             ------
             |     |
             |     o
@@ -69,10 +69,10 @@ def hangman(tries):
             |     |
             |    / \
             _
+
             """,
-            #head, torso, both arms, one leg  
-             
-            """
+              #head, torso, both arms, one leg  
+            r"""          
              ------
             |     |
             |     o
@@ -81,9 +81,9 @@ def hangman(tries):
             |    / 
             _
             """,
-            #head, torso, both arms
+            #head, torso, both arms 
 
-            """
+            r"""             
               ------
             |     |
             |     o
@@ -91,10 +91,11 @@ def hangman(tries):
             |     |
             |   
             _
-            """,
+            """ ,
             #head, torso, one arm
 
-            """
+            r"""
+
               ------
             |     |
             |     o
@@ -105,8 +106,7 @@ def hangman(tries):
             """,
             #head, torso
 
-            """
-            r
+            r"""            
               ------
             |     |
             |     o
@@ -117,7 +117,7 @@ def hangman(tries):
             """,
             #head
 
-            """
+            r"""          
             ------
             |     |
             |     o
@@ -127,8 +127,7 @@ def hangman(tries):
             _
             """,
             #initial state
-            
-            """
+            r"""          
              ------
             |     |
             |     
