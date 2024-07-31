@@ -41,7 +41,7 @@ def game(word):
                     ]
                 for index in indices:
                     letter_list[index] = guess
-                guessed_word = "".join(letter_list)
+                guessed_word = " ".join(letter_list)
                 if "_" not in guessed_word:
                     guessed = True
         elif len(guess) == len(word) and guess.isalpha():
