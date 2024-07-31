@@ -19,7 +19,7 @@ def game(word):
 
     print(Fore.RED + "Let's play!")
     print(hangman(tries))
-    print(guessed_word)
+    print(" ".join(guessed_word))
     print("\n")
 
     while not guessed and tries > 0:
