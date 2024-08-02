@@ -59,11 +59,11 @@ https://pep8ci.herokuapp.com/
 ![ pep8 result ](photos/pep8_result.png)
 
 ### Bugs
-- No bugs found
-...
-### Reaming Bugs
--	No bugs reaming
-Deployment
+- There were problems with spaces, as when letters were added they appeared in incorrect places.
+- Fixed by removing spaces from the word before indexing.
+
+### Remaining Bugs
+-	No bugs remaining
 
 ### Deployment
 This project was deployed at Heroku, steps for deploy are listed bellow:
