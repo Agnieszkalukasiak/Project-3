@@ -11,7 +11,7 @@ def random_word_selected():
 
 
 def game(word):
-    guessed_word = "_" * len(word)
+    guessed_word = "_ " * len(word)
     guessed = False
     letters_guessed = []
     words_guessed = []
@@ -23,7 +23,7 @@ def game(word):
     print("\n")
 
     while not guessed and tries > 0:
-        guess = input("Guess a word or a letter:").upper()
+        guess = input("Guess a word or a letter: ").upper()
         if len(guess) == 1 and guess.isalpha():
             if guess in letters_guessed:
                 print(Fore.RED + "You already guessed that letter", guess)
@@ -34,19 +34,19 @@ def game(word):
             else:
                 print(Fore.GREEN + "You did it!", guess, " is in the word")
                 letters_guessed.append(guess)
-                letter_list = list(guessed_word)
+                letter_list = list(guessed_word.replace(" ",""))
                 indices = [
                     i for i, letter in enumerate(word)
                     if letter == guess
                     ]
                 for index in indices:
                     letter_list[index] = guess
-                guessed_word = "".join(letter_list)
+                guessed_word = " ".join(letter_list)
                 if "_" not in guessed_word:
                     guessed = True
         elif len(guess) == len(word) and guess.isalpha():
             if guess in words_guessed:
-                print("You alreaqdy guessed the word", guess)
+                print("You already guessed the word", guess)
             elif guess.lower() != word.lower():
                 print(guess, "is not in the word")
                 tries -= 1
@@ -150,7 +150,7 @@ def hangman(tries):
 def main():
     word = random_word_selected()
     game(word)
-    while input("Want to play again? (Y/N)").upper() == "Y":
+    while input("Want to play again? (Y/N) ").upper() == "Y":
         main()
 
 
