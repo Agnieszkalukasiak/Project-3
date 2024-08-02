@@ -34,7 +34,7 @@ def game(word):
             else:
                 print(Fore.GREEN + "You did it!", guess, " is in the word")
                 letters_guessed.append(guess)
-                letter_list = list(guessed_word.replace(" ",""))
+                letter_list = list(guessed_word.replace(" ", ""))
                 indices = [
                     i for i, letter in enumerate(word)
                     if letter == guess
