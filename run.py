@@ -19,7 +19,7 @@ def game(word):
 
     print(Fore.RED + "Let's play!")
     print(hangman(tries))
-    print(" ".join(guessed_word))
+    print(guessed_word)
     print("\n")
 
     while not guessed and tries > 0:
@@ -32,7 +32,7 @@ def game(word):
                 tries -= 1
                 letters_guessed.append(guess)
             else:
-                print(Fore.GREEN + "You did it!", guess, "is in the word")
+                print(Fore.GREEN + "You did it!", guess, " is in the word")
                 letters_guessed.append(guess)
                 letter_list = list(guessed_word)
                 indices = [
@@ -41,12 +41,12 @@ def game(word):
                     ]
                 for index in indices:
                     letter_list[index] = guess
-                guessed_word = " ".join(letter_list)
+                guessed_word = "".join(letter_list)
                 if "_" not in guessed_word:
                     guessed = True
         elif len(guess) == len(word) and guess.isalpha():
             if guess in words_guessed:
-                print("You already guessed the word", guess)
+                print("You alreaqdy guessed the word", guess)
             elif guess.lower() != word.lower():
                 print(guess, "is not in the word")
                 tries -= 1
