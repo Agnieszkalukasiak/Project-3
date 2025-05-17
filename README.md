@@ -73,16 +73,7 @@ This project was deployed at Heroku, steps for deploy are listed bellow:
 -	Link the Heroku app to the repository, then Deploy.
 -	The live link can be found here: (https://project3-hangman-9e8f8cca5ebe.herokuapp.com/)
 
-### Credits:
 
-I searched for solutions of the problems that occurred during the project development on the following websites:
-
-- w3schools.com
-- my mentor
-- code insitute tutors
--	Geeksforgeeks
--	Freecodecamp
--	The Code Institute for the deployment terminal.
 
 
 
